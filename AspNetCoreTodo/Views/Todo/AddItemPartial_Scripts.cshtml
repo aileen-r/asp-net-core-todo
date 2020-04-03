@@ -1,0 +1,10 @@
+<script src="~/lib/moment.js/moment.min.js"></script>
+<script src="~/lib/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#DueAt').datetimepicker({
+            format: "dd/mm/yyyy"
+        });
+        console.log($('#DueAt'));
+    });
+</script>

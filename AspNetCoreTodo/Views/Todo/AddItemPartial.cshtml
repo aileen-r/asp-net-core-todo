@@ -6,3 +6,12 @@
     <input asp-for="DueAt" id="DueAt">
     <button type="submit">Add</button>
 </form>
+
+@section Scripts
+{
+    @Html.PartialAsync("AddItemPartial_Scripts")
+}
+
+@section Styles {
+    @Html.PartialAsync("AddItemPartial_Styles")
+}
