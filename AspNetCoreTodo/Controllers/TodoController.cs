@@ -2,8 +2,10 @@ using System;
 using System.Threading.Tasks;
 using AspNetCoreTodo.Models;
 using AspNetCoreTodo.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
+[Authorize]
 public class TodoController : Controller
 {
     private readonly ITodoItemService _todoItemService;
