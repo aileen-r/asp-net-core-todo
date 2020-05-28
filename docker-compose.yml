@@ -1,10 +1,16 @@
-nginx:
-    build: ./nginx
-    links:
-        - kestrel:kestrel
-    ports:
-        - "80:80"
-kestrel:
-    build: .
-    ports:
-        - "80"
+version: "3.8"
+services:
+    nginx:
+        build: ./nginx
+        image: asp-net-core-todo-nginx:${IMAGE_TAG}
+        links:
+            - kestrel:kestrel
+        ports:
+            - "80:80"
+        restart: always
+    kestrel:
+        build: .
+        image: asp-net-core-todo-nginx:${IMAGE_TAG}
+        ports:
+            - "80"
+        restart: "always"
