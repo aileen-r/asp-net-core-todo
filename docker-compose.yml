@@ -10,7 +10,7 @@ services:
         restart: always
     kestrel:
         build: .
-        image: asp-net-core-todo-nginx:${IMAGE_TAG}
+        image: asp-net-core-todo-kestrel:${IMAGE_TAG}
         ports:
             - "80"
         restart: "always"
