@@ -77,5 +77,5 @@ jobs:
       with:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
         service: asp-net-core-todo-service
-        cluster: asp-net-core-todo
+        cluster: asp-net-core-todo-cluster
         wait-for-service-stability: true
