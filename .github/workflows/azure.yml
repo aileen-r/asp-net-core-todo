@@ -23,6 +23,12 @@ jobs:
       with:
         dotnet-version: '3.1.301'
 
+    - name: Unit Tests
+      run: dotnet test ./AspNetCoreTodo.UnitTests.AspNetCoreTodo.UnitTests.csproj
+
+    - name: Integration Tests
+      run: dotnet test ./AspNetCoreTodo.IntegrationTests.AspNetCoreTodo.IntegrationTests.csproj
+
     - name: Build with dotnet
       run: dotnet build ./AspNetCoreTodo/AspNetCoreTodo.csproj --configuration Release
 
